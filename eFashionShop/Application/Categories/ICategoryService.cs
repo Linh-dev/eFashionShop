@@ -9,5 +9,8 @@ namespace eFashionShop.Application.Categories
         Task<List<CategoryVm>> GetAll();
 
         Task<CategoryVm> GetById(int id);
+        Task<bool> Create(CategoryCreateVm categoryVm);
+        Task<bool> Delete(int id);
+        Task<List<CategoryVm>> GetListParent();
     }
 }

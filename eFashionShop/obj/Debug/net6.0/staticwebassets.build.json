@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iT3McZmbjv+GhapYlqoAIdRew/tGiDwWal4ZR4Rx7ic=",
+  "Hash": "xHQl5pCbFdz4/ZuUdrNsQGVQ+Gk2JDk5QHEJfVpeBn4=",
   "Source": "eFashionShop",
   "BasePath": "_content/eFashionShop",
   "Mode": "Default",
@@ -1666,12 +1666,12 @@
       "OriginalItemSpec": "wwwroot\\newTemplate\\lib\\slick\\slick-theme.scss"
     },
     {
-      "Identity": "E:\\EFashionShop\\eFashionShop\\eFashionShop\\wwwroot\\user-content\\8fb491d3-565d-484c-973d-798ad8be8863.jpg",
+      "Identity": "E:\\EFashionShop\\eFashionShop\\eFashionShop\\wwwroot\\user-content\\0a9fe3f8-25e6-45be-8d3c-50b956097ceb.JPG",
       "SourceId": "eFashionShop",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\EFashionShop\\eFashionShop\\eFashionShop\\wwwroot\\",
       "BasePath": "_content/eFashionShop",
-      "RelativePath": "user-content/8fb491d3-565d-484c-973d-798ad8be8863.jpg",
+      "RelativePath": "user-content/0a9fe3f8-25e6-45be-8d3c-50b956097ceb.JPG",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1680,7 +1680,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\user-content\\8fb491d3-565d-484c-973d-798ad8be8863.jpg"
+      "OriginalItemSpec": "wwwroot\\user-content\\0a9fe3f8-25e6-45be-8d3c-50b956097ceb.JPG"
     }
   ]
 }

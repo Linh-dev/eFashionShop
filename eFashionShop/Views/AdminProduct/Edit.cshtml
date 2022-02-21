@@ -1,28 +1,28 @@
 ﻿@model eFashionShop.ViewModels.Catalog.Products.ProductUpdateRequest
-
 @{
     ViewData["Title"] = "Cập nhật sản phẩm";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration;
 @*@section Scripts{
     <script src="https://cdn.ckeditor.com/ckeditor5/21.0.0/classic/ckeditor.js"></script>
     <script>
-        ClassicEditor
-            .create(document.querySelector('#txt_details'), {
-                // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
-            })
-            .then(editor => {
-                window.editor = editor;
-            })
-            .catch(err => {
-                console.error(err.stack);
-            });
+    ClassicEditor
+    .create(document.querySelector('#txt_details'), {
+    // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+    })
+    .then(editor => {
+    window.editor = editor;
+    })
+    .catch(err => {
+    console.error(err.stack);
+    });
     </script>
-}*@
+    }*@
 <div class="container-fluid">
     <h1 class="mt-4">Cập nhật sản phẩm</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="/adminproduct/index">Trang chủ</a></li>
         <li class="breadcrumb-item active">Cập nhật sản phẩm</li>
     </ol>
     <div class="card mb-4">
@@ -43,12 +43,12 @@
 
                     <div class="form-group">
                         <label asp-for="Description" class="control-label"></label>
-                        <textarea asp-for="Description" rows="5" class="form-control"></textarea>
+                        <textarea asp-for="Description" rows="4" class="form-control"></textarea>
                         <span asp-validation-for="Description" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Details" class="control-label"></label>
-                        <textarea id="txt_details" asp-for="Details" rows="35" class="form-control"></textarea>
+                        <textarea id="txt_details" asp-for="Details" rows="8" class="form-control"></textarea>
                         <span asp-validation-for="Details" class="text-danger"></span>
                     </div>
                     <div class="form-group">
@@ -66,6 +66,32 @@
                         <input asp-for="SeoAlias" class="form-control" />
                         <span asp-validation-for="SeoAlias" class="text-danger"></span>
                     </div>
+                    <div class="form-group">
+                        <label asp-for="SeoAlias" class="control-label"></label>
+                        <input asp-for="SeoAlias" class="form-control" />
+                        <span asp-validation-for="SeoAlias" class="text-danger"></span>
+                    </div>
+@*                    <div class="row">
+                        <div class="col-2 d-flex flex-column">
+                            @foreach (var photo in Model.Images)
+                            {
+                                <img src="@(Configuration["BaseAddress"] + photo.ImagePath)" alt="{{photo.url}}" class="img-thumbnail p-1">
+                                <div class="d-flex">
+                                    <button [disabled]="@(photo.IsDefault)"
+                                        [ngClass]='photo.isMain ? "btn-success active" : "btn-outline-success"'
+                                        class="btn btn-sm flex-grow-1"
+                                        (click)="setMainPhoto(photo)">
+                                        Main
+                                    </button>
+                                    <button [disabled]="@(photo.IsDefault)"
+                                        class="btn btn-sm btn-danger flex-grow-1"
+                                        (click)="deletePhoto(photo)">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </div>
+                            }
+                        </div>
+                    </div>*@
                     <div class="form-group">
                         <label asp-for="ThumbnailImage" class="control-label"></label>
                         <input asp-for="ThumbnailImage" type="file" class="form-control" />

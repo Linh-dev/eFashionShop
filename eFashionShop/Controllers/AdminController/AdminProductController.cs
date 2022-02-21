@@ -111,6 +111,7 @@ namespace eFashionShop.Controllers.AdminController
         public async Task<IActionResult> Edit(int id)
         {
             var product = await _productService.GetById(id);
+            var images = await _productService.GetListImages(id);
             var editVm = new ProductUpdateRequest()
             {
                 Id = product.Id,
@@ -119,7 +120,9 @@ namespace eFashionShop.Controllers.AdminController
                 Name = product.Name,
                 SeoAlias = product.SeoAlias,
                 SeoDescription = product.SeoDescription,
-                SeoTitle = product.SeoTitle
+                SeoTitle = product.SeoTitle,
+                Images = images,
+                
             };
             return View(editVm);
         }

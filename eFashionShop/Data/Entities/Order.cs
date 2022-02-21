@@ -16,7 +16,7 @@ namespace eFashionShop.Data.Entities
         public string ShipPhoneNumber { set; get; }
         public OrderStatus Status { set; get; }
 
-        public int UserId { set; get; }
+        public int? UserId { set; get; }
         public AppUser AppUser { get; set; }
         public List<OrderDetail> OrderDetails { get; set; }
 
